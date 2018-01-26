@@ -1,0 +1,308 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@font-face { 
+	font-family: roboto;
+	src: url('fonts/Roboto-Regular.ttf');
+}
+
+h1, h2, h3, h4, footer, body, #introRect, .articlePreview, .articleText, .navbar{
+	font-family: roboto;
+}
+
+footer{
+	background-color: #000;
+}
+
+footer h3{
+	color: #FFF;
+	padding: 2% 2% 0% 3.3%;
+	font-size: 1.8em;
+}
+
+body{
+	background: rgb(220, 220, 220);
+	text-align: justify;
+}
+
+h1, h2{
+	padding-bottom: 4%;
+}
+
+h2{
+	font-size: 1.8em;
+}
+
+h4{
+	font-weight: bold;
+	color: #000;
+}
+
+#introRect{
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	width: 100%;
+	height: auto;
+	background: #f0ad4e;
+	position: absolute;
+	word-wrap: break-word;
+}
+
+.pagination > li > a, .pagination > li > span{
+     color: black !Important;
+     background: #f0ad4e !Important;
+     border-radius: 0px !Important;       
+}	
+
+.alert-primary{
+	padding-top: 6.5%;
+}
+
+.articlePreview{
+	padding: 0% 2% 1% 2%;
+	border-top: 2px solid #f0ad4e;
+	/*background-color: rgba(240, 173, 78, 0.2);
+	box-shadow: 0px 5px 20px rgba(240, 173, 78, 0.5);*/
+}
+
+.articleFull{
+	padding: 0% 2% 1% 2%;
+	border-top: 2px solid #f0ad4e;
+	/*background-color: rgba(240, 173, 78, 0.1);
+	box-shadow: 0px 5px 20px rgba(240, 173, 78, 0.2);*/
+}
+
+.jumbotron{
+    background-image: url('img/container-img.jpg');    
+	background-size: cover;
+    background-position: 50% 35%;
+	height: 300%;
+	position: relative;
+}
+
+.btn-warning, .btn-danger{
+	border-radius: 0px;
+}
+
+.btn-warning{
+	color: #000;
+}
+
+.btn-warning:hover{
+	color: #000;
+}
+
+.icon-bar{
+	background: #000;
+}
+
+.navbar-light .navbar-nav > .active{
+    background-color: transparent;
+    border-top: 2px solid #f0ad4e;
+}
+
+.navbar-light .navbar-nav > .active > a{
+	color: #f0ad4e;
+	font-weight: bold;
+}
+
+.navbar-light .navbar-nav > li a{
+	color: #000;
+}
+
+.mapPadder{
+	padding-top: 15%;
+}
+
+.col-sm-12{
+	color: #000;
+	padding: 2% 2% 0% 2%;
+	font-size: 1.1em;
+}
+
+.col-sm-4, .col-sm-8{
+	color: #000;
+	padding: 2% 2% 6% 2%;
+	font-size: 1.1em;
+}
+
+.copy{
+	padding-top: 16px;
+	padding-bottom: 32px;
+	color: #FFF;
+	font-style: italic;
+	text-align: center;
+}
+
+.list-group{
+	color: #fff;
+	font-size: 1.1em;
+}
+
+.navbar{
+	border-radius: 0%;
+	background: rgba(255, 255, 255, 0.99);
+	border-color: #FFF;
+	box-shadow: 0px 5px 10px rgba(100, 100, 100, 0.8);
+}
+
+.logo{
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 50%;
+	height: auto;
+	padding-left: 10%;
+	padding-top: 4%;
+	padding-bottom: 4%;
+}
+
+.logo img{	
+	width: 80%;
+    height: auto;
+}
+
+.footerLogo{
+	padding-top: 1%;
+	padding-left: 1.5%;
+	padding-bottom: 3%; 
+}
+
+.footerLogo img{
+	opacity: 0.45;
+	padding-left: 1.5%;
+	width: 15%;
+    height: auto;
+}
+
+.footerLogo img:hover{
+	opacity: 1;
+}
+
+@media screen and (max-width: 767px){
+	nav, form{
+		font-size: 0.8em;
+	}
+
+	h1{
+		font-size: 2em;
+	}	
+	
+	h2{
+		font-size: 1.6em;
+	}
+
+	h4{
+		font-size: 1em;
+	}
+
+	footer h3{
+		font-size: 1.2em;
+	}
+
+	#introRect{
+		font-size: 0.7em;
+		padding: 2%;
+	}
+
+	.articlePreview h4{
+		font-size: 1em;
+	}
+
+	.articleFull{
+		font-size: 0.8em;
+	}
+
+	.articleFull h4{
+		font-size: 1em;
+	}
+
+	.mapPadder{
+		padding-top: 0%;
+	}
+
+	.col-sm-12{
+		font-size: 1em;
+		width: 100%;
+		padding: 2% 0% 0% 0%;
+	}
+
+	.col-sm-4, .col-sm-8{
+		font-size: 1em;
+		padding: 2% 0% 4% 0%;
+		width: 100%;
+	}
+
+	.copy{
+		font-size: 0.7em;
+		background-size: cover;
+	}
+
+	.logo{
+		padding-top: 8%;
+	}
+
+	.footerLogo{
+		padding-left: 0%;
+		padding-right: 2%;
+	}
+
+	.footerLogo img{
+		width: 15%;
+    	height: auto;
+	}
+	
+	.btn-warning, .btn-danger{
+		font-size: 0.8em;
+		padding: 0.7%;
+	}
+	
+	.pagination{
+		display: inline !Important;
+	}
+
+	.pagination > li > a, .pagination > li > span{
+     	font-size: 0.8em !Important;
+		padding: 1% 2% 1% 2%;
+	}
+}
+
+
+@media screen and (max-width: 450px){
+	.logo{
+		padding-top: 10%;
+	}
+}
+
+@media screen and (max-width: 300px){
+	.logo{
+		padding-top: 14%;
+	}
+}		
+
+@media screen and (min-width: 820px){
+	#introRect{
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 960px){
+	#introRect{
+		padding-top: 2%;
+		padding-bottom: 2%;
+	}
+}
+
+@media screen and (min-width: 1920px){
+	#introRect{
+		padding-top: 1%;
+		padding-bottom: 1%;
+	}
+}
+
+@media screen and (min-width: 2600px){
+	#introRect{
+		padding-top: 0.5%;
+		padding-bottom: 0.5%;
+	}
+}

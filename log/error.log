@@ -1,0 +1,2 @@
+[2018-01-22 17-51-50] PHP Warning: require(C:\xampp\htdocs\Nette\_ledex\app\presenters/templates/Error/500.phtml): failed to open stream: No such file or directory in C:\xampp\htdocs\Nette\_ledex\app\presenters\ErrorPresenter.php:40  @  http://localhost/Nette/_ledex/www/ 
+[2018-01-23 12-44-02] PHP Warning: require(D:\_odpad\XAMPP\htdocs\Nette\_____ledex\app\presenters/templates/Error/500.phtml): failed to open stream: No such file or directory in D:\_odpad\XAMPP\htdocs\Nette\_____ledex\app\presenters\ErrorPresenter.php:40  @  http://localhost/Nette/_____ledex/www/ 
