@@ -1,4 +1,40 @@
-{block content}
+<?php
+// source: E:\xampp\htdocs\Nette\_WEBY\_ledex\LED_EXPERTS\app/templates/Homepage/contacts.latte
+
+use Latte\Runtime as LR;
+
+class Template709e3f8e1d extends Latte\Runtime\Template
+{
+	public $blocks = [
+		'content' => 'blockContent',
+	];
+
+	public $blockTypes = [
+		'content' => 'html',
+	];
+
+
+	function main()
+	{
+		extract($this->params);
+		if ($this->getParentName()) return get_defined_vars();
+		$this->renderBlock('content', get_defined_vars());
+		return get_defined_vars();
+	}
+
+
+	function prepare()
+	{
+		extract($this->params);
+		Nette\Bridges\ApplicationLatte\UIRuntime::initialize($this, $this->parentName, $this->blocks);
+		
+	}
+
+
+	function blockContent($_args)
+	{
+		extract($_args);
+?>
 
 <style>
 
@@ -32,25 +68,30 @@
     </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a n:href="Homepage:default">HLAVNÍ STRÁNKA</a></li>
-            <li class="active"><a n:href="Homepage:contacts">KONTAKTY</a></li>
-            <li><a n:href="Homepage:equipment">VYBAVENÍ</a></li>
-            <li><a n:href="Homepage:services">SLUŽBY</a></li>
+            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Homepage:default")) ?>">HLAVNÍ STRÁNKA</a></li>
+            <li class="active"><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Homepage:contacts")) ?>">KONTAKTY</a></li>
+            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Homepage:equipment")) ?>">VYBAVENÍ</a></li>
+            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Homepage:services")) ?>">SLUŽBY</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-              {if $user->loggedIn}
-                <li><a n:href="Sign:out">Odhlásit <span class = "glyphicon glyphicon-log-out"> </span></a></li>
-              {else}
-                <li><a n:href="Sign:in">Přihlásit se <span class = "glyphicon glyphicon-log-in"> </span></a></li>
-              {/if}
+<?php
+		if ($user->loggedIn) {
+			?>                <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Sign:out")) ?>">Odhlásit <span class = "glyphicon glyphicon-log-out"> </span></a></li>
+<?php
+		}
+		else {
+			?>                <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Sign:in")) ?>">Přihlásit se <span class = "glyphicon glyphicon-log-in"> </span></a></li>
+<?php
+		}
+?>
           </ul>
         </div>
     </nav>
 
       <div class = "jumbotron">
         <div class = "logo">
-          <img src = "{$basePath}/images/logo2.png"/>
+          <img src = "<?php echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl($basePath)) /* line 53 */ ?>/images/logo2.png">
         </div>
 
         <div id = "introRect">
@@ -94,4 +135,7 @@
 
 
 
-{/block}
+<?php
+	}
+
+}

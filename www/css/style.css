@@ -18,7 +18,7 @@ footer{
 
 footer h3{
 	color: #FFF;
-	padding: 2% 2% 0% 3.3%;
+	padding: 0 2% 0 3.3%;
 	font-size: 1.8em;
 }
 
@@ -50,10 +50,16 @@ h4{
 	word-wrap: break-word;
 }
 
+.headlineLine{
+	clear: both;
+	width: 100%;
+	border-top: 2px solid #f0ad4e;
+}
+
 .pagination > li > a, .pagination > li > span{
      color: black !Important;
      background: #f0ad4e !Important;
-     border-radius: 0px !Important;       
+     border-radius: 0 !Important;
 }	
 
 .alert-primary{
@@ -61,14 +67,14 @@ h4{
 }
 
 .articlePreview{
-	padding: 0% 2% 1% 2%;
+	padding: 0 2% 1% 2%;
 	border-top: 2px solid #f0ad4e;
 	/*background-color: rgba(240, 173, 78, 0.2);
 	box-shadow: 0px 5px 20px rgba(240, 173, 78, 0.5);*/
 }
 
 .articleFull{
-	padding: 0% 2% 1% 2%;
+	padding: 0 2% 1% 2%;
 	border-top: 2px solid #f0ad4e;
 	/*background-color: rgba(240, 173, 78, 0.1);
 	box-shadow: 0px 5px 20px rgba(240, 173, 78, 0.2);*/
@@ -83,7 +89,7 @@ h4{
 }
 
 .btn-warning, .btn-danger{
-	border-radius: 0px;
+	border-radius: 0;
 }
 
 .btn-warning{
@@ -118,7 +124,7 @@ h4{
 
 .col-sm-12{
 	color: #000;
-	padding: 2% 2% 0% 2%;
+	padding: 2% 2% 0 2%;
 	font-size: 1.1em;
 }
 
@@ -142,10 +148,10 @@ h4{
 }
 
 .navbar{
-	border-radius: 0%;
+	border-radius: 0;
 	background: rgba(255, 255, 255, 0.99);
 	border-color: #FFF;
-	box-shadow: 0px 5px 10px rgba(100, 100, 100, 0.8);
+	box-shadow: 0 5px 10px rgba(100, 100, 100, 0.8);
 }
 
 .logo{
@@ -218,18 +224,18 @@ h4{
 	}
 
 	.mapPadder{
-		padding-top: 0%;
+		padding-top: 0;
 	}
 
 	.col-sm-12{
 		font-size: 1em;
 		width: 100%;
-		padding: 2% 0% 0% 0%;
+		padding: 2% 0 0 0;
 	}
 
 	.col-sm-4, .col-sm-8{
 		font-size: 1em;
-		padding: 2% 0% 4% 0%;
+		padding: 2% 0 4% 0;
 		width: 100%;
 	}
 
@@ -243,7 +249,7 @@ h4{
 	}
 
 	.footerLogo{
-		padding-left: 0%;
+		padding-left: 0;
 		padding-right: 2%;
 	}
 

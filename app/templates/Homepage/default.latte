@@ -46,7 +46,9 @@
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GiA3jwm5lE0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     {/if}
-        <br>    
+        <br>
+        <div class = "headlineLine"> </div>
+        <h1>Úspěšně za námi</h1>
         {if $user->loggedIn}
           <div class="articlePreview">
           <h4>Přidání článku</h4>
@@ -60,19 +62,17 @@
                     <div class = articleText>{$article->content|stripHtml|truncate:128}</div>
                     <a n:href = "Article:default $article->id"><button class = "btn btn-warning"> Dále <span class = "glyphicon glyphicon-circle-arrow-right"></button></a>
             </div>          
-        {/foreach}
+            {/foreach}
 
         <ul class="pagination">
-                    {for $i = 1; $i <= $paginator->getPageCount(); $i++}
-                        <li><a n:href="Homepage:default $i">{$i}</a></li>
-                    {/for}                 
+            {for $i = 1; $i <= $paginator->getPageCount(); $i++}
+                <li><a n:href="Homepage:default $i">{$i}</a></li>
+            {/for}
         </ul>
       </p>
       <br>
     </div> 
 </div>
-
-
 
 {/block}
 
