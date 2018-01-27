@@ -4,6 +4,7 @@ namespace App\Presenters;
 
 use Nette;
 use Nette\Database\Context;
+use Tracy;
 
 
 class HomepagePresenter extends Nette\Application\UI\Presenter
@@ -16,6 +17,7 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 	}
 
 	public function renderDefault($page = 1) {
+        $this->template->contacts = $this->database->table('contacts');
 		$paginator = new Nette\Utils\Paginator;
 		$articlesCount  = $this->database->table("articles")->count();
 		$paginator->setItemsPerPage(5);
