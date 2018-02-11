@@ -1,6 +1,0 @@
-parameters:
-
-database:
-	dsn: 'mysql:host=localhost;dbname=ledexdb'
-	user: ledex
-	password: Root12
