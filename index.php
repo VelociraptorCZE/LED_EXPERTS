@@ -1,3 +1,3 @@
 <?php
-header("Location: http://ledex.8u.cz/www/");
+header("Location: http://raichlsimon.9e.cz/ledex/www/");
 ?>

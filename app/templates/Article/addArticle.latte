@@ -17,13 +17,15 @@
             <li><a n:href="Homepage:services">SLUŽBY</a></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-              {if $user->loggedIn}
-                <li><a n:href="Sign:out">Odhlásit <span class = "glyphicon glyphicon-log-out"> </span></a></li>
-              {else}
-                <li><a n:href="Sign:in">Přihlásit se <span class = "glyphicon glyphicon-log-in"> </span></a></li>
-              {/if}
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {if $user->loggedIn}
+                    <li style = "padding-top: 7.5%">Přihlášen <b>{php echo $user->getIdentity()->username}</b></li>
+                    <li><a n:href="Sign:out">Odhlásit <i class="fas fa-user-times"></i></a></li>
+                {else}
+                    <li><a n:href="Sign:in">Přihlásit se <i class="far fa-user"></i></a></li>
+                {/if}
+            </ul>
+
         </div>
     </nav>
 	<header>
@@ -46,7 +48,7 @@
        Nadpis:
        <input type = "text" maxlength = "128" n:name = "title" class = "form-control"><br>
        Text:
-       <textarea n:name = "content" class = "form-control" rows = "20" style = "max-width: 100%; min-width: 100%;"></textarea><br>
+       <textarea n:name = "content" class="ckeditor" rows = "40" style = "max-width: 100%; min-width: 100%;"></textarea><br>
        <center><input type = "submit" n:name = "send" value = "Přidat" class = "btn btn-warning" style = "width: 128px;"></center>
        {/form}
        {else}

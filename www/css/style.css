@@ -10,15 +10,16 @@
 
 h1, h2, h3, h4, footer, body, #introRect, .articlePreview, .articleText, .navbar{
 	font-family: roboto;
+	transition: 0.35s;
 }
 
 footer{
+	color: #8b8b8b;
 	background-color: #000;
 	box-shadow: 0 -5px 10px rgba(100, 100, 100, 0.8);
 }
 
 footer h3{
-	color: #FFF;
 	padding: 0 2% 0 3.3%;
 	font-size: 1.8em;
 }
@@ -51,7 +52,7 @@ h4{
 	word-wrap: break-word;
 }
 
-#myCarousel{
+#myCarousel, #myCarousel2{
     background-color: rgb(39, 174, 96);
     width: 80%;
 }
@@ -60,9 +61,18 @@ h4{
     box-shadow: 0px 20000px 0px 20000px #000;
 }
 
+.navbar-nav.navbar-right:last-child {
+	margin-right: 0;
+}
+
 .headlineLine{
 	width: 100%;
 	border-top: 2px solid #f0ad4e;
+}
+
+.headlineLine2{
+	width: 100%;
+	border-top: 3px solid #f0ad4e;
 }
 
 .pagination > li > a, .pagination > li > span{
@@ -93,7 +103,6 @@ h4{
     background-image: url('img/container-img.jpg');    
 	background-size: cover;
     background-position: 50% 35%;
-	height: 300%;
 	position: relative;
 }
 
@@ -146,7 +155,6 @@ h4{
 .copy{
 	padding-top: 16px;
 	padding-bottom: 32px;
-	color: #FFF;
 	font-style: italic;
 	text-align: center;
 }
@@ -165,7 +173,7 @@ h4{
 
 .logo{
 	background-color: rgba(255, 255, 255, 0.5);
-	width: 50%;
+	width: 40%;
 	height: auto;
 	padding-left: 10%;
 	padding-top: 4%;
@@ -258,6 +266,7 @@ h4{
 	}
 
 	.logo{
+		width: 45%;
 		padding-top: 8%;
 	}
 
@@ -283,6 +292,10 @@ h4{
 	.pagination > li > a, .pagination > li > span{
      	font-size: 0.8em !Important;
 		padding: 1% 2% 1% 2%;
+	}
+
+	.contVideo{
+		padding-bottom: 2%;
 	}
 }
 

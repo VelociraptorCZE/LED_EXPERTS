@@ -17,13 +17,15 @@
             <li><a n:href="Homepage:services">SLUŽBY</a></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-              {if $user->loggedIn}
-                <li><a n:href="Sign:out">Odhlásit <span class = "glyphicon glyphicon-log-out"> </span></a></li>
-              {else}
-                <li><a n:href="Sign:in">Přihlásit se <span class = "glyphicon glyphicon-log-in"> </span></a></li>
-              {/if}
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {if $user->loggedIn}
+                    <li style = "padding-top: 7.5%">Přihlášen <b>{php echo $user->getIdentity()->username}</b></li>
+                    <li><a n:href="Sign:out">Odhlásit <i class="fas fa-user-times"></i></a></li>
+                {else}
+                    <li><a n:href="Sign:in">Přihlásit se <i class="far fa-user"></i></a></li>
+                {/if}
+            </ul>
+
         </div>
     </nav>
 	<header>
@@ -43,12 +45,12 @@
       <p>
        <div class = "articleFull"> 
         <h4>{$articles->title}</h4>
-        {$articles->content}
+        {php echo $articles->content}
         <br><br>
-        <a n:href = "Homepage:default"><button class = "btn btn-warning"><span class = "glyphicon glyphicon-circle-arrow-left"> </span>  Zpět</button></a></button> 
+        <a n:href = "Homepage:default"><button class = "btn btn-warning"><i class="fas fa-angle-left"></i> Zpět</button></a></button>
         {if $user->loggedIn}
-        <a n:href = "Article:editArticle $articles->id"><button class = "btn btn-warning"><span class = "glyphicon glyphicon-pencil"> </span> Upravit</button></a></button> 
-        <a n:href = "Article:deleteArticle $articles->id"><button class = "btn btn-danger"><span class = "glyphicon glyphicon-trash"> </span> Odstranit článek</button></a></button> 
+        <a n:href = "Article:editArticle $articles->id"><button class = "btn btn-warning"><i class="far fa-edit"></i> Upravit</button></a></button>
+        <a n:href = "Article:deleteArticle $articles->id"><button class = "btn btn-danger"><i class="fas fa-trash-alt"></i> Odstranit článek</button></a></button>
         {/if}
         <br>
       </div>

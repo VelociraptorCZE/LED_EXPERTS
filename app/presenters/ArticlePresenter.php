@@ -5,6 +5,7 @@ namespace App\Presenters;
 use Nette;
 use Nette\Database\Context;
 use Nette\Application\UI;
+use Nette\Utils\Strings;
 
 
 class ArticlePresenter extends Nette\Application\UI\Presenter
@@ -42,7 +43,7 @@ class ArticlePresenter extends Nette\Application\UI\Presenter
 		$form->addTextArea("content", "Obsah")->setRequired();
 		$form->addSubmit("send", "Přidat");
 		$form->onSuccess[] = [$this, "addArticleSucceeded"];
-		return $form;	
+		return $form;
 	}
 
 	public function addArticleSucceeded($form, $values){

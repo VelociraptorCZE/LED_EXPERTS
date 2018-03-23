@@ -38,13 +38,15 @@
             <li><a n:href="Homepage:services">SLUŽBY</a></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-              {if $user->loggedIn}
-                <li><a n:href="Sign:out">Odhlásit <span class = "glyphicon glyphicon-log-out"> </span></a></li>
-              {else}
-                <li><a n:href="Sign:in">Přihlásit se <span class = "glyphicon glyphicon-log-in"> </span></a></li>
-              {/if}
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {if $user->loggedIn}
+                    <li style = "padding-top: 7.5%">Přihlášen <b>{php echo $user->getIdentity()->username}</b></li>
+                    <li><a n:href="Sign:out">Odhlásit <i class="fas fa-user-times"></i></a></li>
+                {else}
+                    <li><a n:href="Sign:in">Přihlásit se <i class="far fa-user"></i></a></li>
+                {/if}
+            </ul>
+
         </div>
     </nav>
 
@@ -60,39 +62,103 @@
      </header>
 
 <div class = "container">
+    <div class="col-sm-12">
+    <h1>Vybavení</h1>
+        <h2>LED panely P3.9 indoor</h2>
+        <center><div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-    <center><div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="img-responsive" src = "{$basePath}/images/equipment-1.jpg"/>
+                        <center><h4 style = "color: #fff;">Kabely</h4></center>
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src = "{$basePath}/images/equipment-2.jpg"/>
+                        <center><h4 style = "color: #fff;">LED panely</h4></center>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src = "{$basePath}/images/IMG_2831.JPG"/>
+                        <center><h4 style = "color: #fff;">LED panely</h4></center>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src = "{$basePath}/images/IMG_2835.JPG"/>
+                        <center><h4 style = "color: #fff;">LED panely</h4></center>
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </center>
+        <br>
+        <h2>LED panely P6.6 indoor/outdoor</h2>
+
+        <center><div id="myCarousel2" class="carousel slide" data-ride="carousel">
 
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel2" data-slide-to="1"></li>
+            <li data-target="#myCarousel2" data-slide-to="2"></li>
+            <li data-target="#myCarousel2" data-slide-to="3"></li>
+            <li data-target="#myCarousel2" data-slide-to="4"></li>
+            <li data-target="#myCarousel2" data-slide-to="5"></li>
         </ol>
 
         <div class="carousel-inner">
             <div class="item active">
-                <img class="img-responsive" src = "{$basePath}/images/equipment-1.jpg"/>
-                <center><h4 style = "color: #fff;">Kabely</h4></center>
+                <img class="img-responsive" src = "{$basePath}/images/IMG_2796.JPG"/>
+                <center><h4 style = "color: #fff;">P6</h4></center>
             </div>
 
             <div class="item">
-                <img class="img-responsive" src = "{$basePath}/images/equipment-2.jpg"/>
-                <center><h4 style = "color: #fff;">LED panely</h4></center>
+                <img class="img-responsive" src = "{$basePath}/images/IMG_2806.JPG"/>
+                <center><h4 style = "color: #fff;">P6</h4></center>
+            </div>
+            <div class="item">
+                <img class="img-responsive" src = "{$basePath}/images/IMG_2810.JPG"/>
+                <center><h4 style = "color: #fff;">P6</h4></center>
+            </div>
+            <div class="item">
+                <img class="img-responsive" src = "{$basePath}/images/IMG_2813.JPG"/>
+                <center><h4 style = "color: #fff;">P6</h4></center>
+            </div>
+            <div class="item">
+                <img class="img-responsive" src = "{$basePath}/images/IMG_2817.JPG"/>
+                <center><h4 style = "color: #fff;">P6</h4></center>
+            </div>
+            <div class="item">
+                <img class="img-responsive" src = "{$basePath}/images/IMG_2818.JPG"/>
+                <center><h4 style = "color: #fff;">P6</h4></center>
             </div>
         </div>
 
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel2" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>
         </center>
-<br/>
+    <br/>
+    </div>
 </div>
-
 
 
 {/block}

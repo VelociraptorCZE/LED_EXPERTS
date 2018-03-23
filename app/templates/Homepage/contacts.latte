@@ -38,13 +38,15 @@
             <li><a n:href="Homepage:services">SLUŽBY</a></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-              {if $user->loggedIn}
-                <li><a n:href="Sign:out">Odhlásit <span class = "glyphicon glyphicon-log-out"> </span></a></li>
-              {else}
-                <li><a n:href="Sign:in">Přihlásit se <span class = "glyphicon glyphicon-log-in"> </span></a></li>
-              {/if}
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {if $user->loggedIn}
+                    <li style = "padding-top: 7.5%">Přihlášen <b>{php echo $user->getIdentity()->username}</b></li>
+                    <li><a n:href="Sign:out">Odhlásit <i class="fas fa-user-times"></i></a></li>
+                {else}
+                    <li><a n:href="Sign:in">Přihlásit se <i class="far fa-user"></i></a></li>
+                {/if}
+            </ul>
+
         </div>
     </nav>
 
@@ -62,7 +64,7 @@
 <div class = "container">
     <div class="col-sm-4">
 
-      <h1>Kontakty</h1>   
+      <h1>Kontakty</h1> <br>  
       <h2>Adresa</h2> 
       <p>
           
@@ -72,13 +74,6 @@
           Česká republika<br>
           VAT: CZ28389417<br>
           email: <a href = "mailto:info@ledexperts.eu">info@ledexperts.eu</a><br>
-
-      <h2>Vedení firmy</h2>      
-      <p>
-        Radim Janoušek<br>
-        telefon: +42000000000<br>
-        email: <a href = "mailto:info@ledexperts.eu">info@ledexperts.eu</a><br>
-      </p>
       </p>
   </div>
   
@@ -91,7 +86,5 @@
   </div>  
   
   </div>
-
-
 
 {/block}

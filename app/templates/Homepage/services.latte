@@ -38,13 +38,15 @@
             <li class="active"><a n:href="Homepage:services">SLUŽBY</a></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-              {if $user->loggedIn}
-                <li><a n:href="Sign:out">Odhlásit <span class = "glyphicon glyphicon-log-out"> </span></a></li>
-              {else}
-                <li><a n:href="Sign:in">Přihlásit se <span class = "glyphicon glyphicon-log-in"> </span></a></li>
-              {/if}
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {if $user->loggedIn}
+                    <li style = "padding-top: 7.5%">Přihlášen <b>{php echo $user->getIdentity()->username}</b></li>
+                    <li><a n:href="Sign:out">Odhlásit <i class="fas fa-user-times"></i></a></li>
+                {else}
+                    <li><a n:href="Sign:in">Přihlásit se <i class="far fa-user"></i></a></li>
+                {/if}
+            </ul>
+
         </div>
     </nav>
 
@@ -61,13 +63,22 @@
 
 <div class = "container"> 
   <div class="col-sm-12">
-  Půjčování LED panelů a jejich montáž, stavění podií...
-  <br>
-  <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KFaDEJUSfS0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-      <br>
+
+      <h1>Služby</h1>
+  <h2 style = "padding-bottom: 0;">Půjčování LED panelů a jejich montáž, stavění podií...<h2>
   </div>
 </div>
-
+<div class = "container" style="padding-bottom: 2%; padding-left: 0;">
+  <div class="col-sm-6 contVideo">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KFaDEJUSfS0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+	 </div>
+	   <div class="col-sm-6">
+     <div class="embed-responsive embed-responsive-16by9 halfvideo">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/DAl0jcXAf9c" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+	   </div>
+    </div>
+  </div>
+</div>
 {/block}
